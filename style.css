@@ -140,6 +140,16 @@
   #nana{
     font-size: 30px;
   }
+  body{
+    flex-direction: column;
+
+  }
+ table{
+    display: none;
+ }
+ nav{
+    display: none;
+ }
   }
 
   
@@ -161,7 +171,7 @@
   }
   
   .card-four {
-    background: url("./images/IMG-20200821-WA0022.jpg");
+    background: url("./images/IMG-20190525-WA0020.jpg");
     background-size: cover;
   }
   
@@ -207,3 +217,121 @@
     }
   }
   
+
+
+  table {
+    box-shadow: 5px 5px 5px rgb(105, 105, 105);
+    background-color: white;
+    border-radius: 5px;
+    max-width: 700px;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  td {
+    padding: 0;
+    margin: 0;
+  }
+  
+  img {
+    float: right;
+    width: 300px;
+    border-radius: 5px;
+  }
+  
+  nav ul {
+    border: 1px solid rgb(231, 231, 231);
+    border-left: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(105, 105, 105);
+  }
+  
+  nav ul li a {
+    float: left;
+    position: relative;
+    padding: 18px;
+    display: block;
+    border-right: 1px solid rgb(231, 231, 231);
+    text-align: center;
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+    font-size: 20px;
+    background-color: white;
+    transition-duration: 500ms;
+  }
+  
+  nav ul li a.left {
+    float: right;
+    border-left: 1px solid rgb(231, 231, 231);
+    border-right: none;
+  }
+  
+  nav ul li a:hover {
+    background-color: rgb(240, 240, 240);
+    transition: all ease-in-out 300ms;
+  }
+  
+  nav ul li a.name:hover {
+    background-color: white;
+    cursor: default;
+  }
+  
+  nav ul li a.dreams:active {
+    color: orchid;
+  }
+  
+  nav ul li a.your-best:active {
+    color: gold;
+  }
+  
+  nav ul li a.snow-day:active {
+    color: azure;
+  }
+  
+  nav ul li a.bibliography:active {
+    color: lightgrey;
+  }
+  
+  nav ul li a::before {
+    content: '';
+    display: block;
+    height: 7.5px;
+    width: 100%;
+    margin-left: -18px;
+    top: 0;
+    position: absolute;
+    width: 0;
+    transition: all ease-in-out 500ms;
+  }
+  
+  a.dreams::before {
+    background: linear-gradient(to right, orchid, mediumorchid);
+  }
+  
+  a.your-best::before {
+    background: linear-gradient(to right, gold, khaki);
+  }
+  
+  a.snow-day::before {
+    background: linear-gradient(to right, rgb(91, 145, 145), mintcream);
+  }
+  
+  a.bibliography::before {
+    background: grey;
+    background: linear-gradient(to right, lightgrey, grey);
+  }
+  
+  a.name:hover::before {
+    width: 0;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
